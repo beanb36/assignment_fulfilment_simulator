@@ -11,14 +11,19 @@
     },
     "browser_specific_settings": {
         "gecko": {
-            "id": "canvas-confetti@example.com"
+            "id": "canvas-confetti@bacondino.com",
+            "data_collection_permissions": {
+                "required": ["none"]
+            }
         }
     },
     "content_scripts": [
         {
-            "matches": ["*://*.instructure.com/*",
-                        "*://*.canvaslms.com/*",
-                        "*://canvas.*/*"],
+            "matches": [
+                "*://*.instructure.com/*",
+                "*://*.canvaslms.com/*",
+                "*://canvas.yourschool.edu/*"
+            ],
             "js": ["redirect.js"],
             "run_at": "document_start"
         }
